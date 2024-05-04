@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
+# Scrum Poker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the Scrum Poker App! This project aims to streamline your Agile estimation process with an intuitive and efficient interface.
 
-Currently, two official plugins are available:
+<img src="./public/project-screenshot.png">
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
 
-## Expanding the ESLint configuration
+To get started with the Scrum Poker App, follow these simple steps:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. Clone the repository:
+```bash
+git clone https://github.com/victordantasdev/scrum-poker-app
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Set the environment variable:
+- Clone the Scrum Poker API repository from [here](https://github.com/victordantasdev/scrum-poker-api) if you haven't already.
+- Set the environment variable in the format:
+```bash
+VITE_WS_URL=ws://<host>/ws
+```
+
+## Usage
+
+Once you've completed the installation steps, you're ready to run the project:
+
+```bash
+npm run dev
+```
+
+Access the Scrum Poker App locally in your browser at [http://localhost:3000](http://localhost:3000).
+
+You can also test the application live at [https://fast-scrum-poker.vercel.app/](https://fast-scrum-poker.vercel.app/).
+
+## Technologies Used
+The Scrum Poker App is built with the following technologies:
+
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Bun](https://bun.sh/)
+- [Shadcn UI](https://ui.shadcn.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to the project, please fork the repository and submit a pull request with your changes.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+**Happy estimating with Scrum Poker!** 🃏🚀
