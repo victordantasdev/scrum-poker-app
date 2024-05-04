@@ -15,7 +15,7 @@ git clone https://github.com/victordantasdev/scrum-poker-app
 
 2. Install dependencies:
 ```bash
-npm install
+bun install
 ```
 
 3. Set the environment variable:
@@ -30,7 +30,7 @@ VITE_WS_URL=ws://<host>/ws
 Once you've completed the installation steps, you're ready to run the project:
 
 ```bash
-npm run dev
+bun dev
 ```
 
 Access the Scrum Poker App locally in your browser at [http://localhost:3000](http://localhost:3000).
