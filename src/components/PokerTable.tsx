@@ -13,7 +13,7 @@ type Props = {
 export default function PokerTable({ room, sendJsonMessage }: Props) {
 	const [showCards, setShowCards] = useState(false)
 
-	const moves = room?.moves?.filter((move) => move.selected_card >= 0) || []
+	const moves = room?.moves?.filter((move) => !!move.selected_card) || []
 	const hasCards = moves?.length > 0
 
 	function handleFlipCards() {
@@ -33,7 +33,7 @@ export default function PokerTable({ room, sendJsonMessage }: Props) {
 	return (
 		<div className="md-down:w-full">
 			<div className="bg-gray-700 pr-2 pb-2 rounded-full shadow-2xl">
-				<div className="bg-gray-600 h-[200px] md:w-[550px] md:h-[300px] rounded-full p-2 lg:p-4">
+				<div className="bg-gray-600 h-[200px] sm:w-[550px] sm:h-[300px] rounded-full p-2 lg:p-4">
 					<div className="bg-emerald-800 pl-2 pt-2 w-full h-full rounded-full">
 						<div className="bg-emerald-600 w-full h-full rounded-full flex flex-col items-center justify-center">
 							{hasCards && (

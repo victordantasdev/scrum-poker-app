@@ -9,7 +9,7 @@ import Players from "@/components/Players"
 import PokerTable from "@/components/PokerTable"
 
 import { KEY, WS_URL } from "@/utils/constants"
-import { getInitialSettings } from "@/utils/getinitialSettings"
+import { getInitialSettings } from "@/utils/getInitialSettings"
 import { handleBeforeUnload } from "@/utils/handleBeforeUnload"
 
 import type { Room } from "@/types"
@@ -24,7 +24,7 @@ export default function RoomPage() {
 
 	const [room, setRoom] = useState<Room>()
 	const [players, setPlayers] = useState<string[]>([])
-	const [playerSelectedCard, setPlayerSelectedCard] = useState<number>(-1)
+	const [playerSelectedCard, setPlayerSelectedCard] = useState<string>('')
 	const [shouldDisplayGameResult, setShouldDisplayGameResult] = useState(false)
 
 	function handleSetRoomData() {
@@ -36,12 +36,12 @@ export default function RoomPage() {
 		setPlayers(playersData)
 
 		const moves = roomData?.moves
-		const movesData = moves?.filter((move) => move.selected_card !== -1) || []
+		const movesData = moves?.filter((move) => !!move.selected_card) || []
 		const userSelectedCardData = movesData?.find(
 			(move) => move?.username === username,
 		)?.selected_card
 
-		setPlayerSelectedCard(userSelectedCardData || -1)
+		setPlayerSelectedCard(userSelectedCardData || '')
 
 		const showCards = roomData?.settings?.show_cards
 		setShouldDisplayGameResult(showCards)

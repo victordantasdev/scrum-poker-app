@@ -4,7 +4,6 @@ import {
 	Table,
 	TableBody,
 	TableCell,
-	TableFooter,
 	TableHead,
 	TableHeader,
 	TableRow,
@@ -15,14 +14,7 @@ type Props = {
 }
 
 export default function GameResult({ room }: Props) {
-	const moves = room?.moves?.filter((move) => move.selected_card >= 0) || []
-	const average =
-		moves.reduce((acc, move) => acc + move.selected_card, 0) / moves.length
-
-	const formattedAverage =
-		Math.round(average) === average
-			? String(average)
-			: `~${Math.round(average)}`
+	const moves = room?.moves?.filter((move) => !!move.selected_card) || []
 
 	return (
 		<div className="flex gap-4 ">
@@ -45,14 +37,6 @@ export default function GameResult({ room }: Props) {
 								</TableRow>
 							))}
 						</TableBody>
-						<TableFooter>
-							<TableRow>
-								<TableCell>Average</TableCell>
-								<TableCell className="text-center">
-									{formattedAverage}
-								</TableCell>
-							</TableRow>
-						</TableFooter>
 					</Table>
 				</CardContent>
 			</Card>

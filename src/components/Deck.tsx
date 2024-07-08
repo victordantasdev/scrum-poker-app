@@ -6,7 +6,7 @@ import type { SendJsonMessage } from "react-use-websocket/dist/lib/types"
 
 type Props = {
 	username: string
-	playerSelectedCard: number
+	playerSelectedCard: string
 	sendJsonMessage: SendJsonMessage
 }
 

@@ -1,5 +1,5 @@
 export type PokerCardProps = {
-	cardNumber: number
+	cardNumber: string
 	index: number
 }
 
@@ -12,7 +12,7 @@ export type Settings = {
 
 export type Move = {
 	username: string
-	selected_card: number
+	selected_card: string
 	selected_card_index: number
 }
 

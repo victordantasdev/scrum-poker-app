@@ -5,7 +5,7 @@ import SpadesIcon from "@/assets/SpadesIcon"
 import { cn } from "@/lib/utils"
 
 type Props = {
-	cardNumber: number
+	cardNumber: string
 	index: number
 	isSelected?: boolean
 	isFlipped?: boolean
