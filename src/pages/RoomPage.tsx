@@ -9,7 +9,7 @@ import Players from "@/components/Players"
 import PokerTable from "@/components/PokerTable"
 
 import { KEY, WS_URL } from "@/utils/constants"
-import { getInitialSettings } from "@/utils/getInitialSettings"
+import { getInitialSettings } from "@/utils/getinitialSettings"
 import { handleBeforeUnload } from "@/utils/handleBeforeUnload"
 
 import type { Room } from "@/types"
